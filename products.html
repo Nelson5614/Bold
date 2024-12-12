@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover Bold Couture's handcrafted collection of luxury satin robes, crochet bucket hats, satin pajamas, and accessories. Premium quality fashion made in Lesotho.">
+    <meta name="keywords" content="Bold Couture, satin robes, crochet bucket hats, satin pajamas, luxury loungewear, handmade accessories, Lesotho fashion">
+    <meta name="author" content="Bold Couture">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.boldcouture.com/products">
+    <meta property="og:title" content="Luxury Handcrafted Fashion Collection | Bold Couture">
+    <meta property="og:description" content="Discover Bold Couture's handcrafted collection of luxury satin robes, crochet bucket hats, satin pajamas, and accessories. Premium quality fashion made in Lesotho.">
+    <meta property="og:image" content="path-to-your-featured-product-image.jpg">
+
+    <title>Luxury Handcrafted Fashion Collection | Bold Couture</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        .category-btn.active {
+            border-color: #111827; /* gray-900 */
+        }
+            #mobile-menu {
+            transition: all 0.3s ease-in-out;
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        #mobile-menu.menu-open {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Optional: Add a smooth transition for the menu button icon */
+        #mobile-menu-button i {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        #mobile-menu-button:hover i {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-white z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center justify-between h-20">
+                     <!-- Logo -->
+                     <a href="index.html" class="text-2xl font-light text-gray-900 flex items-center space-x-1">
+                        <img src="images/logo.jpg" alt="Bold Couture Logo" class="w-20 h-20">
+                        <span>Bold Couture</span>
+                   
+                    </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-gray-900">Home</a>
+                    <a href="about.html" class="text-gray-600 hover:text-gray-900">About</a>
+                    <a href="products.html" class="text-gray-600 hover:text-gray-900">Products</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-gray-900">Contact</a>
+                </div>
+
+                <!-- Social Media Icons - Updated Size -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#" class="text-gray-600 hover:text-gray-900">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900">
+                        <i class="fab fa-facebook text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900">
+                        <i class="fab fa-twitter text-2xl"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-gray-600 hover:text-gray-900 focus:outline-none" 
+                        id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-white" id="mobile-menu">
+            <div class="px-6 py-4 space-y-4">
+                <a href="index.html" class="block text-gray-600 hover:text-gray-900">Home</a>
+                <a href="about.html" class="block text-gray-600 hover:text-gray-900">About</a>
+                <a href="products.html" class="block text-gray-600 hover:text-gray-900">Products</a>
+                <a href="contact.html" class="block text-gray-600 hover:text-gray-900">Contact</a>
+                
+                <!-- Mobile Social Media Icons -->
+                <div class="flex items-center space-x-6 pt-4 border-t border-gray-100">
+                    <a href="#" class="text-gray-600 hover:text-gray-900">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900">
+                        <i class="fab fa-facebook text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900">
+                        <i class="fab fa-twitter text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="relative pt-20">
+        <div class="h-[40vh] relative overflow-hidden">
+            <div class="absolute inset-0 bg-black/40 z-10"></div>
+            <img src="images/contactbg.jpg" 
+                 alt="Bold Couture Luxury Fashion Collection" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 z-20 flex items-center justify-center text-center">
+                <div class="max-w-3xl px-6">
+                    <h1 class="text-4xl md:text-6xl font-light text-white mb-4">Our Collection</h1>
+                    <p class="text-lg text-gray-100">Handcrafted with Love and Precision</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Categories -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-wrap justify-center gap-6 mb-16">
+                <button onclick="filterProducts('all')" 
+                        class="category-btn active text-gray-900 hover:text-gray-600 text-sm uppercase tracking-wider px-4 py-2 border border-transparent hover:border-gray-200">
+                    All Products
+                </button>
+                <button onclick="filterProducts('satin')" 
+                        class="category-btn text-gray-600 hover:text-gray-900 text-sm uppercase tracking-wider px-4 py-2 border border-transparent hover:border-gray-200">
+                    Satin Collection
+                </button>
+                <button onclick="filterProducts('crochet')" 
+                        class="category-btn text-gray-600 hover:text-gray-900 text-sm uppercase tracking-wider px-4 py-2 border border-transparent hover:border-gray-200">
+                    Crochet Items
+                </button>
+                <button onclick="filterProducts('hats')" 
+                        class="category-btn text-gray-600 hover:text-gray-900 text-sm uppercase tracking-wider px-4 py-2 border border-transparent hover:border-gray-200">
+                    Hats
+                </button>
+                <button onclick="filterProducts('accessories')" 
+                        class="category-btn text-gray-600 hover:text-gray-900 text-sm uppercase tracking-wider px-4 py-2 border border-transparent hover:border-gray-200">
+                    Accessories
+                </button>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="products-grid">
+                <!-- Satin Collection Products -->
+                <article class="group product-card" data-category="satin" itemscope itemtype="http://schema.org/Product">
+                    <div class="relative aspect-[3/4] overflow-hidden bg-gray-100 mb-4">
+                        <img src="images/robes.jpg" 
+                            alt="Luxury Satin Robe - Bold Couture" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                            itemprop="image">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-white px-3 py-1 text-xs uppercase tracking-wider text-gray-900">
+                                Satin Collection
+                            </span>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <h2 class="text-gray-900 font-light text-lg" itemprop="name">Luxurious Satin Robe(His/Hers)</h2>
+                        <p class="text-gray-600 text-sm" itemprop="description">
+                            Elegant satin robe with delicate lace trim detailing
+                        </p>
+                        <p class="text-gray-900 font-medium" itemprop="price">M 450.00</p>
+                    </div>
+                </article>
+                <article class="group product-card" data-category="satin" itemscope itemtype="http://schema.org/Product">
+                    <div class="relative aspect-[3/4] overflow-hidden bg-gray-100 mb-4">
+                        <img src="images/robe2.jpg" 
+                            alt="Luxury Satin Robe - Bold Couture" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                            itemprop="image">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-white px-3 py-1 text-xs uppercase tracking-wider text-gray-900">
+                                Satin Collection
+                            </span>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <h2 class="text-gray-900 font-light text-lg" itemprop="name">Luxurious Satin Robe (His/Hers)</h2>
+                        <p class="text-gray-600 text-sm" itemprop="description">
+                            Elegant satin robe with delicate lace trim detailing
+                        </p>
+                        <p class="text-gray-900 font-medium" itemprop="price">M 450.00</p>
+                    </div>
+                </article>
+                <article class="group product-card" data-category="satin" itemscope itemtype="http://schema.org/Product">
+                    <div class="relative aspect-[3/4] overflow-hidden bg-gray-100 mb-4">
+                        <img src="images/bonnet6.jpg" 
+                            alt="Luxury Satin Robe - Bold Couture" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                            itemprop="image">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-white px-3 py-1 text-xs uppercase tracking-wider text-gray-900">
+                                Satin Collection
+                            </span>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <h2 class="text-gray-900 font-light text-lg" itemprop="name">Double Layered Bonnets</h2>
+                        <p class="text-gray-600 text-sm" itemprop="description">
+                            Elegant satin bonnets with delicate lace trim detailing
+                        </p>
+                        <p class="text-gray-900 font-medium" itemprop="price">M 130.00</p>
+                    </div>
+                </article>
+                <article class="group product-card" data-category="satin" itemscope itemtype="http://schema.org/Product">
+                    <div class="relative aspect-[3/4] overflow-hidden bg-gray-100 mb-4">
+                        <img src="images/bonnet5.jpg" 
+                            alt="Luxury Satin Robe - Bold Couture" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                            itemprop="image">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-white px-3 py-1 text-xs uppercase tracking-wider text-gray-900">
+                                Satin Collection
+                            </span>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <h2 class="text-gray-900 font-light text-lg" itemprop="name">Double Layered Bonnets</h2>
+                        <p class="text-gray-600 text-sm" itemprop="description">
+                            Elegant satin bonnets with delicate lace trim detailing
+                        </p>
+                        <p class="text-gray-900 font-medium" itemprop="price">M 130.00</p>
+                    </div>
+                </article>
+                <article class="group product-card" data-category="satin" itemscope itemtype="http://schema.org/Product">
+                    <div class="relative aspect-[3/4] overflow-hidden bg-gray-100 mb-4">
+                        <img src="images/bonnet4.jpg" 
+                            alt="Luxury Satin Robe - Bold Couture" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                            itemprop="image">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-white px-3 py-1 text-xs uppercase tracking-wider text-gray-900">
+                                Satin Collection
+                            </span>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <h2 class="text-gray-900 font-light text-lg" itemprop="name">Double Layered Bonnets</h2>
+                        <p class="text-gray-600 text-sm" itemprop="description">
+                            Elegant satin bonnets with delicate lace trim detailing
+                        </p>
+                        <p class="text-gray-900 font-medium" itemprop="price">M 130.00</p>
+                    </div>
+                </article>
+                <article class="group product-card" data-category="satin" itemscope itemtype="http://schema.org/Product">
+                    <div class="relative aspect-[3/4] overflow-hidden bg-gray-100 mb-4">
+                        <img src="images/bonnet3.jpg" 
+                            alt="Luxury Satin Robe - Bold Couture" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                            itemprop="image">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-white px-3 py-1 text-xs uppercase tracking-wider text-gray-900">
+                                Satin Collection
+                            </span>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <h2 class="text-gray-900 font-light text-lg" itemprop="name">Double Layered Bonnets</h2>
+                        <p class="text-gray-600 text-sm" itemprop="description">
+                            Elegant satin bonnets with delicate lace trim detailing
+                        </p>
+                        <p class="text-gray-900 font-medium" itemprop="price">M 130.00</p>
+                    </div>
+                </article>
+                <article class="group product-card" data-category="satin" itemscope itemtype="http://schema.org/Product">
+                    <div class="relative aspect-[3/4] overflow-hidden bg-gray-100 mb-4">
+                        <img src="images/bonnet2.jpg" 
+                            alt="Luxury Satin Robe - Bold Couture" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                            itemprop="image">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-white px-3 py-1 text-xs uppercase tracking-wider text-gray-900">
+                                Satin Collection
+                            </span>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <h2 class="text-gray-900 font-light text-lg" itemprop="name">Double Layered Bonnets</h2>
+                        <p class="text-gray-600 text-sm" itemprop="description">
+                            Elegant satin bonnets with delicate lace trim detailing
+                        </p>
+                        <p class="text-gray-900 font-medium" itemprop="price">M 130.00</p>
+                    </div>
+                </article>
+                <article class="group product-card" data-category="satin" itemscope itemtype="http://schema.org/Product">
+                    <div class="relative aspect-[3/4] overflow-hidden bg-gray-100 mb-4">
+                        <img src="images/bonnet1.jpg" 
+                            alt="Luxury Satin Robe - Bold Couture" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                            itemprop="image">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-white px-3 py-1 text-xs uppercase tracking-wider text-gray-900">
+                                Satin Collection
+                            </span>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <h2 class="text-gray-900 font-light text-lg" itemprop="name">Double Layered Bonnets</h2>
+                        <p class="text-gray-600 text-sm" itemprop="description">
+                            Elegant satin bonnets with delicate lace trim detailing
+                        </p>
+                        <p class="text-gray-900 font-medium" itemprop="price">M 130.00</p>
+                    </div>
+                </article>
+
+                <!-- Crochet Items -->
+                <article class="group product-card" data-category="crochet" itemscope itemtype="http://schema.org/Product">
+                    <div class="relative aspect-[3/4] overflow-hidden bg-gray-100 mb-4">
+                        <img src="images/crochet.jpg" 
+                            alt="Handmade Crochet Top - Bold Couture" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                            itemprop="image">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-white px-3 py-1 text-xs uppercase tracking-wider text-gray-900">
+                                Crochet Items
+                            </span>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <h2 class="text-gray-900 font-light text-lg" itemprop="name">Crochet Summer Top</h2>
+                        <p class="text-gray-600 text-sm" itemprop="description">
+                            Handcrafted crochet top perfect for summer
+                        </p>
+                        <p class="text-gray-900 font-medium" itemprop="price">M 150.00</p>
+                    </div>
+                </article>
+                <article class="group product-card" data-category="crochet" itemscope itemtype="http://schema.org/Product">
+                    <div class="relative aspect-[3/4] overflow-hidden bg-gray-100 mb-4">
+                        <img src="images/crochet1.jpg" 
+                            alt="Handmade Crochet Top - Bold Couture" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                            itemprop="image">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-white px-3 py-1 text-xs uppercase tracking-wider text-gray-900">
+                                Crochet Items
+                            </span>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <h2 class="text-gray-900 font-light text-lg" itemprop="name">Crochet Summer Top</h2>
+                        <p class="text-gray-600 text-sm" itemprop="description">
+                            Handcrafted crochet top perfect for summer
+                        </p>
+                        <p class="text-gray-900 font-medium" itemprop="price">M 150.00</p>
+                    </div>
+                </article>
+                <article class="group product-card" data-category="crochet" itemscope itemtype="http://schema.org/Product">
+                    <div class="relative aspect-[3/4] overflow-hidden bg-gray-100 mb-4">
+                        <img src="images/crochet2.jpg" 
+                            alt="Handmade Crochet Top - Bold Couture" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                            itemprop="image">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-white px-3 py-1 text-xs uppercase tracking-wider text-gray-900">
+                                Crochet Items
+                            </span>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <h2 class="text-gray-900 font-light text-lg" itemprop="name">Crochet Summer Top</h2>
+                        <p class="text-gray-600 text-sm" itemprop="description">
+                            Handcrafted crochet top perfect for summer
+                        </p>
+                        <p class="text-gray-900 font-medium" itemprop="price">M 150.00</p>
+                    </div>
+                </article>
+                <article class="group product-card" data-category="crochet" itemscope itemtype="http://schema.org/Product">
+                    <div class="relative aspect-[3/4] overflow-hidden bg-gray-100 mb-4">
+                        <img src="images/crochet3.jpg" 
+                            alt="Handmade Crochet Top - Bold Couture" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                            itemprop="image">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-white px-3 py-1 text-xs uppercase tracking-wider text-gray-900">
+                                Crochet Items
+                            </span>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <h2 class="text-gray-900 font-light text-lg" itemprop="name">Crochet Summer Top</h2>
+                        <p class="text-gray-600 text-sm" itemprop="description">
+                            Handcrafted crochet top perfect for summer
+                        </p>
+                        <p class="text-gray-900 font-medium" itemprop="price">M 150.00</p>
+                    </div>
+                </article>
+                <article class="group product-card" data-category="crochet" itemscope itemtype="http://schema.org/Product">
+                    <div class="relative aspect-[3/4] overflow-hidden bg-gray-100 mb-4">
+                        <img src="images/crochet4.jpg" 
+                            alt="Handmade Crochet Top - Bold Couture" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                            itemprop="image">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-white px-3 py-1 text-xs uppercase tracking-wider text-gray-900">
+                                Crochet Items
+                            </span>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <h2 class="text-gray-900 font-light text-lg" itemprop="name">Crochet Summer Top</h2>
+                        <p class="text-gray-600 text-sm" itemprop="description">
+                            Handcrafted crochet top perfect for summer
+                        </p>
+                        <p class="text-gray-900 font-medium" itemprop="price">M 150.00</p>
+                    </div>
+                </article>
+                <article class="group product-card" data-category="crochet" itemscope itemtype="http://schema.org/Product">
+                    <div class="relative aspect-[3/4] overflow-hidden bg-gray-100 mb-4">
+                        <img src="images/crochet5.jpg" 
+                            alt="Handmade Crochet Top - Bold Couture" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                            itemprop="image">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-white px-3 py-1 text-xs uppercase tracking-wider text-gray-900">
+                                Crochet Items
+                            </span>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <h2 class="text-gray-900 font-light text-lg" itemprop="name">Crochet Summer Top</h2>
+                        <p class="text-gray-600 text-sm" itemprop="description">
+                            Handcrafted crochet top perfect for summer
+                        </p>
+                        <p class="text-gray-900 font-medium" itemprop="price">M 150.00</p>
+                    </div>
+                </article>
+
+               
+                <!-- Hat Products -->
+                <article class="group product-card" data-category="hats" itemscope itemtype="http://schema.org/Product">
+                    <div class="relative aspect-[3/4] overflow-hidden bg-gray-100 mb-4">
+                        <img src="images/hats5.jpg" 
+                            alt="Classic Crochet Bucket Hat - Bold Couture" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                            itemprop="image">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-white px-3 py-1 text-xs uppercase tracking-wider text-gray-900">
+                                Hats
+                            </span>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <h2 class="text-gray-900 font-light text-lg" itemprop="name">Branded beanies</h2>
+                        <p class="text-gray-600 text-sm" itemprop="description">
+                            available in different colors
+                        </p>
+                        <p class="text-gray-900 font-medium" itemprop="price">M 100.00</p>
+                    </div>
+                </article>
+
+                <article class="group product-card" data-category="hats" itemscope itemtype="http://schema.org/Product">
+                    <div class="relative aspect-[3/4] overflow-hidden bg-gray-100 mb-4">
+                        <img src="images/hat4.jpg" 
+                            alt="Two-Tone Bucket Hat - Bold Couture" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                            itemprop="image">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-white px-3 py-1 text-xs uppercase tracking-wider text-gray-900">
+                                Hats
+                            </span>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <h2 class="text-gray-900 font-light text-lg" itemprop="name">Branded beanies</h2>
+                        <p class="text-gray-600 text-sm" itemprop="description">
+                            available in different colors
+                        </p>
+                        <p class="text-gray-900 font-medium" itemprop="price">M 100.00</p>
+                    </div>
+                </article>
+
+                <article class="group product-card" data-category="hats" itemscope itemtype="http://schema.org/Product">
+                    <div class="relative aspect-[3/4] overflow-hidden bg-gray-100 mb-4">
+                        <img src="images/hat3.jpg" 
+                            alt="Pattern Crochet Bucket Hat - Bold Couture" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                            itemprop="image">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-white px-3 py-1 text-xs uppercase tracking-wider text-gray-900">
+                                Hats
+                            </span>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <h2 class="text-gray-900 font-light text-lg" itemprop="name">Branded beanies</h2>
+                        <p class="text-gray-600 text-sm" itemprop="description">
+                            available in different colors
+                        </p>
+                        <p class="text-gray-900 font-medium" itemprop="price">M 100.00</p>
+                    </div>
+                </article>
+
+                <article class="group product-card" data-category="hats" itemscope itemtype="http://schema.org/Product">
+                    <div class="relative aspect-[3/4] overflow-hidden bg-gray-100 mb-4">
+                        <img src="images/hats6.jpg" 
+                            alt="Summer Floral Bucket Hat - Bold Couture" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                            itemprop="image">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-white px-3 py-1 text-xs uppercase tracking-wider text-gray-900">
+                                Hats
+                            </span>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <h2 class="text-gray-900 font-light text-lg" itemprop="name">Branded beanies</h2>
+                        <p class="text-gray-600 text-sm" itemprop="description">
+                            available in different colors
+                        </p>
+                        <p class="text-gray-900 font-medium" itemprop="price">M 100.00</p>
+                    </div>
+                </article>
+
+                <article class="group product-card" data-category="hats" itemscope itemtype="http://schema.org/Product">
+                    <div class="relative aspect-[3/4] overflow-hidden bg-gray-100 mb-4">
+                        <img src="images/hat1.jpg" 
+                            alt="Reversible Bucket Hat - Bold Couture" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                            itemprop="image">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-white px-3 py-1 text-xs uppercase tracking-wider text-gray-900">
+                                Hats
+                            </span>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <h2 class="text-gray-900 font-light text-lg" itemprop="name">Branded beanies</h2>
+                        <p class="text-gray-600 text-sm" itemprop="description">
+                            available in different colors
+                        </p>
+                        <p class="text-gray-900 font-medium" itemprop="price">M 100.00</p>
+                    </div>
+                </article>
+
+                <!-- Accessories Products -->
+
+
+                <!-- Access1 -->
+                <article class="group product-card" data-category="accessories" itemscope itemtype="http://schema.org/Product">
+                    <div class="relative aspect-[3/4] overflow-hidden bg-gray-100 mb-4">
+                        <img src="images/access1.jpg" 
+                            alt="Seshoeshoe Accessories Bag - Bold Couture" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                            itemprop="image">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-white px-3 py-1 text-xs uppercase tracking-wider text-gray-900">
+                                Accessories
+                            </span>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <h2 class="text-gray-900 font-light text-lg" itemprop="name">Seshoeshoe Accessories Bag</h2>
+                        <p class="text-gray-600 text-sm" itemprop="description">
+                            Elegant accessory piece for any occasion
+                        </p>
+                        <p class="text-gray-900 font-medium" itemprop="price">M 120.00</p>
+                    </div>
+                </article>
+
+                <!-- Access2 -->
+                <article class="group product-card" data-category="accessories" itemscope itemtype="http://schema.org/Product">
+                    <div class="relative aspect-[3/4] overflow-hidden bg-gray-100 mb-4">
+                        <img src="images/access2.jpg" 
+                            alt="Seshoeshoe Accessories Bag - Bold Couture" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                            itemprop="image">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-white px-3 py-1 text-xs uppercase tracking-wider text-gray-900">
+                                Accessories
+                            </span>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <h2 class="text-gray-900 font-light text-lg" itemprop="name">Seshoeshoe Accessories Bag</h2>
+                        <p class="text-gray-600 text-sm" itemprop="description">
+                            Stylish and versatile accessory design
+                        </p>
+                        <p class="text-gray-900 font-medium" itemprop="price">M 120.00</p>
+                    </div>
+                </article>
+
+                <!-- Access3 -->
+                <article class="group product-card" data-category="accessories" itemscope itemtype="http://schema.org/Product">
+                    <div class="relative aspect-[3/4] overflow-hidden bg-gray-100 mb-4">
+                        <img src="images/access3.jpg" 
+                            alt="Seshoeshoe Accessories Bag - Bold Couture" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                            itemprop="image">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-white px-3 py-1 text-xs uppercase tracking-wider text-gray-900">
+                                Accessories
+                            </span>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <h2 class="text-gray-900 font-light text-lg" itemprop="name">Seshoeshoe Accessories Bag</h2>
+                        <p class="text-gray-600 text-sm" itemprop="description">
+                            Contemporary accessory with modern appeal
+                        </p>
+                        <p class="text-gray-900 font-medium" itemprop="price">M 120.00</p>
+                    </div>
+                </article>
+
+                <!-- Access4 -->
+                <article class="group product-card" data-category="accessories" itemscope itemtype="http://schema.org/Product">
+                    <div class="relative aspect-[3/4] overflow-hidden bg-gray-100 mb-4">
+                        <img src="images/access4.jpg" 
+                            alt="Seshoeshoe Accessories Bag - Bold Couture" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                            itemprop="image">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-white px-3 py-1 text-xs uppercase tracking-wider text-gray-900">
+                                Accessories
+                            </span>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <h2 class="text-gray-900 font-light text-lg" itemprop="name">Seshoeshoe Accessories Bag</h2>
+                        <p class="text-gray-600 text-sm" itemprop="description">
+                            Classic accessory with timeless charm
+                        </p>
+                        <p class="text-gray-900 font-medium" itemprop="price">M 120.00</p>
+                    </div>
+                </article>
+
+                <!-- Accessories Products Group 2 (Access5-7) -->
+
+                <!-- Access5 -->
+                <article class="group product-card" data-category="accessories" itemscope itemtype="http://schema.org/Product">
+                    <div class="relative aspect-[3/4] overflow-hidden bg-gray-100 mb-4">
+                        <img src="images/access5.jpg" 
+                            alt="Seshoeshoe Tote Bag - Bold Couture" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                            itemprop="image">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-white px-3 py-1 text-xs uppercase tracking-wider text-gray-900">
+                                Accessories
+                            </span>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <h2 class="text-gray-900 font-light text-lg" itemprop="name">Seshoeshoe Tote Bag</h2>
+                        <p class="text-gray-600 text-sm" itemprop="description">
+                            Premium tote bag with luxurious details
+                        </p>
+                        <p class="text-gray-900 font-medium" itemprop="price">M 180.00</p>
+                    </div>
+                </article>
+
+                <!-- Access6 -->
+                <article class="group product-card" data-category="accessories" itemscope itemtype="http://schema.org/Product">
+                    <div class="relative aspect-[3/4] overflow-hidden bg-gray-100 mb-4">
+                        <img src="images/access6.jpg" 
+                            alt="Seshoeshoe Tote Bag - Bold Couture" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                            itemprop="image">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-white px-3 py-1 text-xs uppercase tracking-wider text-gray-900">
+                                Accessories
+                            </span>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <h2 class="text-gray-900 font-light text-lg" itemprop="name">Seshoeshoe Tote Bag</h2>
+                        <p class="text-gray-600 text-sm" itemprop="description">
+                            Sophisticated tote for special occasions
+                        </p>
+                        <p class="text-gray-900 font-medium" itemprop="price">M 180.00</p>
+                    </div>
+                </article>
+
+                <!-- Access7 -->
+                <article class="group product-card" data-category="accessories" itemscope itemtype="http://schema.org/Product">
+                    <div class="relative aspect-[3/4] overflow-hidden bg-gray-100 mb-4">
+                        <img src="images/access7.jpg" 
+                            alt="Seshoeshoe Tote Bag - Bold Couture" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                            itemprop="image">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-white px-3 py-1 text-xs uppercase tracking-wider text-gray-900">
+                                Accessories
+                            </span>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <h2 class="text-gray-900 font-light text-lg" itemprop="name">Seshoeshoe Tote Bag</h2>
+                        <p class="text-gray-600 text-sm" itemprop="description">
+                            Exclusive tote with distinctive style
+                        </p>
+                        <p class="text-gray-900 font-medium" itemprop="price">M 180.00</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Option 2: Centered button at the bottom of products section -->
+    <div class="text-center my-16">
+        <a href="contact.html" 
+        class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gray-900 text-white text-sm uppercase tracking-wider hover:bg-gray-800 transition duration-300 ease-in-out transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 group">
+            <span>Contact Us for Purchase</span>
+            <svg xmlns="http://www.w3.org/2000/svg" 
+                class="h-4 w-4 transform group-hover:translate-x-1 transition duration-300" 
+                fill="none" 
+                viewBox="0 0 24 24" 
+                stroke="currentColor">
+                <path stroke-linecap="round" 
+                    stroke-linejoin="round" 
+                    stroke-width="2" 
+                    d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+        </a>
+    </div>
+
+
+ 
+    <!-- Footer -->
+    <footer class="bg-gray-100 py-12">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-xl font-bold text-gray-900 mb-4">BOLD COUTURE</h3>
+                <p class="text-gray-600">Elevating fashion with timeless elegance and bold statements.</p>
+            </div>
+            <div>
+                <h4 class="font-semibold text-gray-900 mb-4">Quick Links</h4>
+                <ul class="space-y-2 text-gray-600">
+                    <li><a href="products.html" class="hover:text-gray-900">Products</a></li>
+                    <li><a href="about.html" class="hover:text-gray-900">About Us</a></li>
+                    <li><a href="contact.html" class="hover:text-gray-900">Contact</a></li>
+                    
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold text-gray-900 mb-4">Follow Us</h4>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fab fa-facebook"></i></a>
+                
+                </div>
+            </div>
+            <div>
+                <h4 class="font-semibold text-gray-900 mb-4">Contact</h4>
+                <address class="text-gray-600 not-italic">
+                    Lithabaneng Mahlabatheng<br>
+                    Maseru 100<br>
+                    Email: info@boldcouture.co.ls<br>
+                    Phone: +266 59818064
+                </address>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function filterProducts(category) {
+            // Update active button state
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                btn.classList.remove('active', 'text-gray-900', 'border-gray-900');
+                btn.classList.add('text-gray-600');
+            });
+            event.target.classList.add('active', 'text-gray-900', 'border-gray-900');
+            event.target.classList.remove('text-gray-600');
+    
+            // Filter products
+            const products = document.querySelectorAll('.product-card');
+            products.forEach(product => {
+                if (category === 'all' || product.dataset.category === category) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        }
+    
+        // Initialize with all products shown
+        document.addEventListener('DOMContentLoaded', () => {
+            filterProducts('all');
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        let isMenuOpen = false;
+
+        // Toggle menu function
+        function toggleMenu(event) {
+            // Prevent event from bubbling up
+            event.stopPropagation();
+            
+            isMenuOpen = !isMenuOpen;
+            
+            // Update button icon
+            mobileMenuButton.innerHTML = isMenuOpen 
+                ? '<i class="fas fa-times text-2xl"></i>' 
+                : '<i class="fas fa-bars text-2xl"></i>';
+            
+            // Toggle menu visibility
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('hidden');
+                setTimeout(() => {
+                    mobileMenu.classList.add('menu-open');
+                }, 10);
+            } else {
+                mobileMenu.classList.remove('menu-open');
+                setTimeout(() => {
+                    mobileMenu.classList.add('hidden');
+                }, 300);
+            }
+        }
+
+        // Click event for menu button
+        mobileMenuButton.addEventListener('click', toggleMenu);
+
+        // Prevent menu from closing when clicking inside the menu
+        mobileMenu.addEventListener('click', function(event) {
+            event.stopPropagation();
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (isMenuOpen && !mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target)) {
+                toggleMenu(event);
+            }
+        });
+
+        // Close menu when window is resized to desktop size
+        window.addEventListener('resize', function() {
+            if (window.innerWidth >= 768 && isMenuOpen) {
+                isMenuOpen = false;
+                mobileMenu.classList.remove('menu-open');
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.innerHTML = '<i class="fas fa-bars text-2xl"></i>';
+            }
+        });
+    });
+    </script>
+</body>
+</html>
